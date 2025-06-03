@@ -15,7 +15,7 @@ function Hero(){
                 <a  className='font-bold text-[1.25rem]' href="">Conheça o meu trabalho</a>
             </button>
            <a
-            href="public\curriculo.pdf"
+            href="/curriculo.pdf"
             download
             target="_blank"
             rel="noopener noreferrer"
