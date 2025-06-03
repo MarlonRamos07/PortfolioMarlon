@@ -1,0 +1,28 @@
+import {Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbite-react";
+import MyButton from './MyButton'
+import '../index.css'
+function myNavBar() {
+  return (
+    <Navbar className="bg-transparent pt-7">
+      <h1 className="text-[1rem] text-white  h-[1.313rem] md:w-[13.313rem] md:text-[1.125rem] md:h-[1.438rem] font-['Space_Grotesk']  ">Desenvolvedor FullStack</h1>
+      <NavbarBrand href="https://flowbite-react.com">
+      </NavbarBrand>
+      <div className="flex md:order-2">
+        <MyButton text="Contato">
+        </MyButton>
+        <NavbarToggle className="ml-3.5 hover:bg-[#B2BAE5] text-white"/>
+      </div>
+      <NavbarCollapse className="font-['Space_Grotesk'] text-center bg-[#B2BAE5]  md:bg-transparent font-bold mt-4">
+        <NavbarLink className="md:text-white text-[0.875rem] md:hover:text-[#B2BAE5]" href="#">
+          Sobre Mim 
+        </NavbarLink>
+        <NavbarLink className="md:text-white text-[0.875rem] md:hover:text-[#B2BAE5] " href="#">Tecnologias</NavbarLink>
+        <NavbarLink className="md:text-white text-[0.875rem] md:hover:text-[#B2BAE5] " href="#">Projetos</NavbarLink>
+        <NavbarLink className="md:text-white text-[0.875rem] md:hover:text-[#B2BAE5] " href="#">Depoimentos</NavbarLink>
+        <NavbarLink className="md:text-white text-[0.875rem] md:hover:text-[#B2BAE5] " href="#">Redes Sociais</NavbarLink>
+      </NavbarCollapse>
+    </Navbar>
+  );
+}
+
+export default myNavBar
