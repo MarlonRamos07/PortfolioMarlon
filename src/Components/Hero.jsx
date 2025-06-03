@@ -29,7 +29,7 @@ function Hero(){
         viewport={{once: false, amount: 0.7}}
         className='flex flex-col gap-6 items-center md:items-start md:gap-10'>
             <motion.h2  
-            variants={fadeIn("left", 1)}
+            variants={fadeIn("down", 1)}
             initial={"hidden"}
             whileInView={"show"}
             viewport={{once: false, amount: 0.7}}
@@ -44,7 +44,7 @@ function Hero(){
                Especialista em <b>Front-End</b>, com habilidades <b>sólidas</b> em Back-End para entregar soluções <b>completas</b> e <b>eficientes para o seu projeto. </b>
             </motion.p>
             <motion.div 
-            variants={fadeIn("left", 0.8)}
+            variants={fadeIn("up", 0.2)}
             initial={"hidden"}
             whileInView={"show"}
             viewport={{once: false, amount: 0.7}}
