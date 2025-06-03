@@ -14,10 +14,16 @@ function Hero(){
             <button className='hover:border-solid-[#B2BAE5] hover:bg-[#2B2E36] hover:text-white w-[18.813rem] h-[3.688rem] rounded-[1.25rem] bg-[#B2BAE5]'>
                 <a  className='font-bold text-[1.25rem]' href="">Conheça o meu trabalho</a>
             </button>
-            <button className='hover:border-solid-[#B2BAE5] hover:bg-[#2B2E36] hover:text-white w-[18.813rem] h-[3.688rem] rounded-[1.25rem] bg-[#B2BAE5] items-center  flex justify-center gap-2'>
-                <a className='font-bold text-[1.25rem]' href="">Baixar meu CV</a>
-                <img src={Download}/>
-            </button>
+           <a
+            href="public\curriculo.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:border-solid-[#B2BAE5] hover:bg-[#2B2E36] hover:text-white w-[18.813rem] h-[3.688rem] rounded-[1.25rem] bg-[#B2BAE5] items-center flex justify-center gap-2"
+        >
+            <span className="font-bold text-[1.25rem]">Baixar meu CV</span>
+            <img src={Download} alt="ícone de download" />
+        </a>
         </div>
         </div>
         
