@@ -3,6 +3,7 @@ import Download from '../assets/download.svg'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
 import { useInView } from 'react-intersection-observer'
+import TypingEffect from './TypingEffect' // Não precisa mais de useState aqui
 
 function Hero() {
   const [ref, inView] = useInView({
@@ -15,7 +16,12 @@ function Hero() {
       initial={{ opacity: 0 }}
       animate={{ opacity: inView ? 1 : 0 }}
       transition={{ duration: 0.5 }}
-      className='flex flex-col md:flex-row-reverse items-center md:justify-center md:gap-36 md:mt-24 md:items-center md:text-start text-center pt-10 gap-8'
+      // REMOVIDO: onAnimationComplete={handleHeroAnimationsComplete}
+      className='flex flex-col md:flex-row-reverse items-center md:justify-center
+                 md:mt-24 md:items-center text-center pt-10 gap-8
+                 md:gap-x-16 md:px-8
+                 lg:gap-x-24 lg:px-8
+                 xl:gap-56 xl:px-0'
     >
       <motion.img
         variants={fadeIn("right", 0.3)}
@@ -33,15 +39,8 @@ function Hero() {
         viewport={{ once: false, amount: 0.7 }}
         className='flex flex-col gap-6 items-center md:items-start md:gap-10'
       >
-        <motion.h2
-          variants={fadeIn("down", 1)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: false, amount: 0.7 }}
-          className='font-bold text-2xl/relaxed text-white md:text-5xl/normal md:w-[45.625rem]'
-        >
-          Olá, eu sou Marlon, Desenvolvedor FullStack
-        </motion.h2>
+        {/* REMOVIDO: startTyping={heroAnimationsComplete} */}
+        <TypingEffect />
 
         <motion.p
           variants={fadeIn("left", 0.7)}
