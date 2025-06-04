@@ -12,7 +12,7 @@ function Sobre() {
       initial={{ opacity: 0 }}
       animate={{ opacity: inView ? 1 : 0 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col gap-4 items-center md:mt-20 mt-10 md:items-start md:pl-72 md:gap-16 md:pt-10"
+      className="flex flex-col gap-4 items-center md:mt-20 mt-10 md:items-start md:pl-52 md:gap-12 md:pt-10"
     >
       <h3 className="text-white text-2xl/normal font-bold md:text-[2.5rem]">Sobre Mim</h3>
       <p className="text-white text-center text-[0.938rem] w-[19.375rem] md:text-2xl/relaxed md:w-[54rem] md:h-[15rem] md:text-start">
