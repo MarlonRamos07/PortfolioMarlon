@@ -15,14 +15,15 @@ function Hero() {
       initial={{ opacity: 0 }}
       animate={{ opacity: inView ? 1 : 0 }}
       transition={{ duration: 0.5 }}
-      // REVISADO: Foco total em md e lg, sem custom breakpoint
-      // md:gap-x-16 para notebooks (tela md)
-      // lg:gap-56 para desktops (tela lg e maiores)
-      // md:px-8 para padding lateral em notebooks (tela md)
-      // lg:px-0 para remover o padding em desktops (tela lg e maiores)
-      className='flex flex-col md:flex-row-reverse items-center md:justify-center 
-                 md:mt-24 md:items-center text-center pt-10 gap-8 
-                 md:gap-x-16 lg:gap-56 md:px-8 lg:px-0' // <<< Ajustes aqui
+      // REVISADO:
+      // md:gap-x-16 e md:px-8 são para telas menores (tablets)
+      // lg:gap-x-24 e lg:px-8 para notebooks (1024px e acima, que é o seu caso)
+      // xl:gap-56 e xl:px-0 para desktops grandes (1280px e acima)
+      className='flex flex-col md:flex-row-reverse items-center md:justify-center
+                 md:mt-24 md:items-center text-center pt-10 gap-8
+                 md:gap-x-16 md:px-8 // Aplicado para tablets e telas menores que 1024px
+                 lg:gap-x-24 lg:px-8 // Aplicado para notebooks de 1024px a 1279px (ajuste o gap-x aqui!)
+                 xl:gap-56 xl:px-0' // Aplicado para desktops a partir de 1280px (seu layout grande)
     >
       <motion.img
         variants={fadeIn("right", 0.3)}
