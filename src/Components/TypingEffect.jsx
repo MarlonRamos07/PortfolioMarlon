@@ -4,7 +4,7 @@ const TypingEffect = () => {
   const basePhrase = "Olá, eu sou Marlon, "
 
   const variablePhrases = useMemo(() => [
-    "Desenvolvedor Fullstack",
+    "Desenvolvedor FullStack",
     "Estudante de ADS UniSenac",
     "Bem-vindo ao meu Portfólio!",
   ], [])
@@ -17,7 +17,7 @@ const TypingEffect = () => {
   const typingSpeedRef = useRef(150)
   const deletingSpeedRef = useRef(75)
   const pauseDelayRef = useRef(1500)
-  const initialDelayRef = useRef(1000)
+  const initialDelayRef = useRef(2000)
 
   useEffect(() => {
     if (!hasStartedTyping) {
