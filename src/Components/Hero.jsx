@@ -15,15 +15,14 @@ function Hero() {
       initial={{ opacity: 0 }}
       animate={{ opacity: inView ? 1 : 0 }}
       transition={{ duration: 0.5 }}
-      // REVISADO:
-      // Mantive o md:justify-center e md:flex-row-reverse.
-      // Adicionei um 'lg:gap-56' para o espaçamento grande em telas maiores.
-      // E um 'md:gap-x-24' (ou outro valor que você ache bom) para notebooks.
-      // Adicionei 'md:px-8 lg:px-0' para dar um pequeno padding nas laterais em notebooks
-      // para evitar que o conteúdo se "encoste" nas bordas, enquanto desktop fica sem.
+      // REVISADO: Foco total em md e lg, sem custom breakpoint
+      // md:gap-x-16 para notebooks (tela md)
+      // lg:gap-56 para desktops (tela lg e maiores)
+      // md:px-8 para padding lateral em notebooks (tela md)
+      // lg:px-0 para remover o padding em desktops (tela lg e maiores)
       className='flex flex-col md:flex-row-reverse items-center md:justify-center 
                  md:mt-24 md:items-center text-center pt-10 gap-8 
-                 md:gap-x-24 lg:gap-56 md:px-8 lg:px-0' // Ajuste aqui!
+                 md:gap-x-16 lg:gap-56 md:px-8 lg:px-0' // <<< Ajustes aqui
     >
       <motion.img
         variants={fadeIn("right", 0.3)}
@@ -46,8 +45,6 @@ function Hero() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.7 }}
-          // Mantive o width fixo como estava, se ele funciona bem para desktop.
-          // Você pode considerar 'md:max-w-[45.625rem]' se quiser mais flexibilidade em notebooks.
           className='font-bold text-2xl/relaxed text-white md:text-5xl/normal md:w-[45.625rem] md:text-start'
         >
           Olá, eu sou Marlon, Desenvolvedor FullStack
@@ -58,8 +55,6 @@ function Hero() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.7 }}
-          // Mantive o width fixo como estava, se ele funciona bem para desktop.
-          // Você pode considerar 'md:max-w-[33.438rem]' se quiser mais flexibilidade em notebooks.
           className='text-white h-[7.813rem] w-[14.875rem] text-[1rem]/loose md:text-2xl/relaxed md:w-[33.438rem] md:h-[6.5rem] md:text-start'
         >
           Especialista em <b>Front-End</b>, com habilidades <b>sólidas</b> em Back-End para entregar soluções <b>completas</b> e <b>eficientes para o seu projeto.</b>
