@@ -38,9 +38,9 @@ const techs = [
 
 function Techs() {
   return (
-    <div>
+    <div className='flex flex-col items-center md:mt-16'>
       <div className='md:mt-20'>
-        <h3 className="hidden md:block md:pl-72 md:text-[2.5rem] font-bold text-white text-2xl">Tecnologias</h3>
+        <h3 className="hidden md:block md:text-[2.5rem] font-bold text-white text-2xl">Tecnologias</h3>
       </div>
 
       <div className="flex flex-col mt-14 items-center justify-center gap-1 px-4">
