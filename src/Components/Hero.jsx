@@ -18,7 +18,8 @@ function Hero() {
       transition={{ duration: 0.5 }}
       // REMOVIDO: onAnimationComplete={handleHeroAnimationsComplete}
       className='flex flex-col md:flex-row-reverse items-center md:justify-center
-                 md:mt-24 md:items-center text-center pt-10 gap-8'
+                 md:mt-24 md:items-center text-center pt-10 gap-8
+'
     >
       <motion.img
         variants={fadeIn("right", 0.3)}
