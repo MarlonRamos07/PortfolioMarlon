@@ -1,60 +1,95 @@
+/* src/TechsHoverEffect.css */
+
+/* Container de cada item de tecnologia */
 .tech-item-container {
-  /* Garante que o item seja um container para o efeito */
   position: relative;
-  overflow: hidden;
-  /* Transições para o background (opcional, pode ser adicionado ao ::before) */
-  transition: background-color 0.5s ease;
-  z-index: 1; /* Garante que o ::before funcione corretamente */
+  overflow: hidden; /* Essencial para o efeito de "subir" do ::before */
+  z-index: 1; /* Garante a ordem de empilhamento */
+  display: flex; /* Para centralizar o conteúdo (imagens) */
+  align-items: center;
+  justify-content: center;
+  /* As classes de tamanho e fundo do Tailwind (w-[], h-[], bg-[]) já estão no JSX */
 }
 
-.tech-item-container img {
-  position: relative;
-  transition: transform 0.5s ease; /* Transição para o giro do ícone */
-  z-index: 3; /* Garante que a imagem esteja acima do ::before */
-  /* Opcional: Adicione um filtro de brilho ou contraste se a imagem for muito clara */
-  /* filter: brightness(0.9); */
+/* Wrapper para as imagens sobrepostas */
+.tech-image-wrapper {
+  position: relative; /* Define o contexto de posicionamento para as imagens absolutas */
+  width: 100%; /* Ocupa todo o espaço do container */
+  height: 100%; /* Ocupa todo o espaço do container */
+  display: flex; /* Para centralizar as imagens dentro do wrapper */
+  align-items: center;
+  justify-content: center;
 }
 
-/* Camada de fundo que se move */
+/* Estilo base para ambas as imagens (personalizada e original) */
+.tech-image-wrapper img {
+  position: absolute; /* Permite sobrepor as imagens */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transição suave para opacidade e rotação */
+  z-index: 3; /* Garante que as imagens fiquem acima da camada de fundo (::before) */
+  /* As classes de tamanho w-[3.75rem] h-[3.75rem] md:w-auto md:h-auto são aplicadas diretamente no JSX */
+}
+
+/* Imagem personalizada (visível por padrão) */
+.tech-image-wrapper .img-custom {
+  opacity: 1; /* Totalmente visível por padrão */
+  transform: rotateY(0deg); /* Sem rotação inicial */
+}
+
+/* Imagem original (escondida por padrão) */
+.tech-image-wrapper .img-original {
+  opacity: 0; /* Totalmente escondida por padrão */
+  pointer-events: none; /* Impede que a imagem invisível interaja com o mouse */
+  transform: rotateY(-360deg); /* Começa girada para a "entrada" */
+  /* Removemos o filtro padrão aqui, pois as cores de fundo foram ajustadas */
+}
+
+/* Camada de fundo que se move (o efeito de "subir") */
 .tech-item-container::before {
-  content: "";
+  content: ""; /* Essencial para pseudo-elementos */
   position: absolute;
-  top: 100%; /* Começa escondido abaixo */
+  top: 100%; /* Começa escondida abaixo do container */
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: transparent; /* Cor padrão, será sobrescrita por classes específicas */
-  transition: top 0.5s ease;
-  z-index: 2; /* Fica entre o container e a imagem */
+  background-color: transparent; /* Cor padrão, será sobrescrita pelas classes específicas */
+  transition: top 0.5s ease; /* Transição para o movimento vertical */
+  z-index: 2; /* Fica entre o container (1) e as imagens (3) */
 }
 
-/* Efeito ao passar o mouse */
+/* Efeitos ao passar o mouse (hover) */
 .tech-item-container:hover::before {
-  top: 0; /* Sobe para cobrir o item */
+  top: 0; /* A camada de fundo sobe para cobrir o item */
 }
 
-.tech-item-container:hover img {
-  transform: rotateY(360deg); /* Gira o ícone */
+.tech-item-container:hover .img-custom {
+  opacity: 0; /* A imagem personalizada desaparece */
+  transform: rotateY(360deg); /* Gira para "sair" */
 }
 
-/* Cores de fundo específicas para cada tecnologia (cores originais) */
-.tech-html::before { background-color: #E34F26; } /* HTML (laranja) */
+.tech-item-container:hover .img-original {
+  opacity: 1; /* A imagem original aparece */
+  transform: rotateY(0deg); /* Gira para a posição normal de "entrada" */
+  pointer-events: auto; /* Permite que a imagem original interaja com o mouse quando visível */
+}
+
+/* Cores de fundo específicas para cada tecnologia (para o ::before) */
+/* As cores são as "oficiais" ou que combinam com a marca da tecnologia */
+.tech-html::before { background-color: #8f402b; } /* HTML (laranja) */
 .tech-css::before { background-color: #1572B6; } /* CSS (azul) */
-.tech-js::before { background-color: #F7DF1E; } /* JavaScript (amarelo) */
+
+/* CORES AJUSTADAS PARA MELHOR CONTRASTE */
+.tech-js::before { background-color: #323330; } /* JavaScript: Fundo quase preto (do logo JS) */
+.tech-jquery::before { background-color: #1C3355; } /* jQuery: Um azul muito escuro */
+.tech-cypress::before { background-color: #17202C; } /* Cypress: Um cinza bem escuro, quase preto */
+.tech-python::before { background-color: #306998; } /* Python: Um azul mais escuro */
+
+
 .tech-react::before { background-color: #61DAFB; } /* React (azul claro) */
 .tech-ts::before { background-color: #3178C6; } /* TypeScript (azul) */
-.tech-tailwind::before { background-color: #06B6D4; } /* Tailwind (azul ciano) */
+.tech-tailwind::before { background-color: #076b7c; } /* Tailwind (azul ciano) */
 .tech-mysql::before { background-color: #4479A1; } /* MySQL (azul escuro) */
-.tech-node::before { background-color: #339933; } /* Node.js (verde) */
+.tech-node::before { background-color: #316b31; } /* Node.js (verde) */
 .tech-jest::before { background-color: #C21325; } /* Jest (vermelho) */
-.tech-figma::before { background-color: #F24E1E; } /* Figma (laranja avermelhado) */
-.tech-python::before { background-color: #3776AB; } /* Python (azul) */
-.tech-jquery::before { background-color: #0769AD; } /* jQuery (azul escuro) */
+.tech-figma::before { background-color: #792b13; } /* Figma (laranja avermelhado) */
 .tech-jira::before { background-color: #0052CC; } /* Jira (azul) */
 .tech-trello::before { background-color: #0079BF; } /* Trello (azul) */
-.tech-cypress::before { background-color: #69D3A5; } /* Cypress (verde claro) */
-
-/* Pode ser útil se as imagens forem brancas ou de cor sólida para que se destaquem sobre o fundo colorido */
-/* .tech-item-container:hover img {
-    filter: invert(1) brightness(2);
-} */
