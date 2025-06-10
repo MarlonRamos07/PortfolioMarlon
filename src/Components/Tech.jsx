@@ -1,11 +1,9 @@
 import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
 
-// =========================================================
-// IMPORTAÇÕES DAS IMAGENS PERSONALIZADAS (SUAS ATUAIS)
-// =========================================================
+
 import HTML from '../assets/html.svg'
-import HTMLDesktop from '../assets/htmldesktop.svg' // Considerado como a versão custom desktop do HTML
+import HTMLDesktop from '../assets/htmldesktop.svg'
 import CSS from '../assets/css.svg'
 import JS from '../assets/javascript.svg'
 import REACT from '../assets/react.svg'
@@ -21,12 +19,7 @@ import JIRA from '../assets/jira.svg'
 import TRELLO from '../assets/trello.svg'
 import Cypress from '../assets/cypress.svg'
 
-// =========================================================
-// IMPORTAÇÕES DAS IMAGENS ORIGINAIS (DESKTOP E MOBILE)
-// COM OS CAMINHOS CORRETOS FORNECIDOS POR VOCÊ: '../original/[nome_arquivo].svg'
-// =========================================================
 
-// Versões Desktop Originais
 import originalHTML from '../original/originalHTML.svg'
 import originalCSS from '../original/originalCSS.svg'
 import originalJS from '../original/originalJS.svg'
@@ -43,7 +36,7 @@ import originalJira from '../original/originalJira.svg'
 import originalTrello from '../original/originalTrello.svg'
 import originalCypress from '../original/originalCypress.svg'
 
-// Versões Mobile Originais
+
 import originalmobileHTML from '../original/originalmobileHTML.svg'
 import originalmobileCSS from '../original/originalmobileCSS.svg'
 import originalmobileJS from '../original/originalmobileJS.svg'
@@ -58,17 +51,12 @@ import originalmobilePython from '../original/originalmobilePython.svg'
 import originalmobileJquery from '../original/originalmobileJquery.svg'
 import originalmobileJira from '../original/originalmobileJira.svg'
 import originalmobileTrello from '../original/originalmobileTrello.svg'
-// Cypress não precisa de originalmobileCypress, pois é hiddenOnMobile
 
-// Importe o CSS personalizado para os efeitos de hover
 import './TechsHoverEffect.css';
 
 // Array de dados das tecnologias
 const techs = [
-    // src: Imagem personalizada padrão (será usada tanto para mobile quanto desktop)
-    // originalSrcDesktop: Caminho para a imagem original da tecnologia para desktop
-    // originalSrcMobile: Caminho para a imagem original da tecnologia para mobile
-    // hasMobileOriginal: Indica se a tecnologia possui uma versão mobile original (quase todas, exceto Cypress)
+
 
     { src: HTML, alt: "HTML", className: "tech-html", originalSrcDesktop: originalHTML, originalSrcMobile: originalmobileHTML, hasMobileOriginal: true },
     { src: CSS, alt: "CSS", className: "tech-css", originalSrcDesktop: originalCSS, originalSrcMobile: originalmobileCSS, hasMobileOriginal: true },
@@ -93,12 +81,12 @@ function Techs() {
     return (
         <div className='flex flex-col items-center md:mt-16'>
             <div className='md:mt-20'>
-                {/* Título "Tecnologias" para desktop (visível apenas em telas maiores) */}
+               
                 <h3 className="hidden md:block md:text-[2.5rem] font-bold text-white text-2xl">Tecnologias</h3>
             </div>
 
             <div className="flex flex-col mt-14 items-center justify-center gap-1 px-4">
-                {/* Título "Tecnologias" para mobile (visível apenas em telas menores) */}
+              
                 <h3 className="md:hidden font-bold text-white text-2xl">Tecnologias</h3>
 
                 {/* Grid para organizar os itens de tecnologia */}
@@ -130,9 +118,6 @@ function Techs() {
                             >
                                 {/* Wrapper para as imagens sobrepostas: uma personalizada e uma original */}
                                 <div className="tech-image-wrapper">
-                                    {/* ========================================================= */}
-                                    {/* IMAGENS PERSONALIZADAS (as que você já usa como padrão) */}
-                                    {/* ========================================================= */}
                                     {/* Versão mobile da imagem personalizada */}
                                     {/* Condição: tech.src existe E o item NÃO está oculto no mobile (hiddenOnMobile) */}
                                     {tech.src && !tech.hiddenOnMobile && (
@@ -143,7 +128,6 @@ function Techs() {
                                         />
                                     )}
                                     {/* Versão desktop da imagem personalizada */}
-                                    {/* Condição: tech.src existe (assumimos que o 'src' padrão serve para desktop custom) */}
                                     {tech.src && (
                                         <img
                                             src={tech.src}
@@ -152,10 +136,6 @@ function Techs() {
                                             className={`img-custom hidden md:block ${tech.alt === "HTML" ? 'w-[6.25rem] h-[6.25rem]' : 'w-auto h-auto'}`}
                                         />
                                     )}
-
-                                    {/* ========================================================= */}
-                                    {/* IMAGENS ORIGINAIS (as que aparecem no hover) */}
-                                    {/* ========================================================= */}
                                     {/* Versão mobile da imagem original */}
                                     {/* Condição: originalSrcMobile existe E o item NÃO está oculto no mobile E tem versão mobile original */}
                                     {tech.originalSrcMobile && !tech.hiddenOnMobile && tech.hasMobileOriginal && (

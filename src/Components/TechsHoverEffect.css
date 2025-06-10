@@ -1,6 +1,3 @@
-/* src/TechsHoverEffect.css */
-
-/* Container de cada item de tecnologia */
 .tech-item-container {
   position: relative;
   overflow: hidden; /* Essencial para o efeito de "subir" do ::before */
@@ -40,7 +37,6 @@
   opacity: 0; /* Totalmente escondida por padrão */
   pointer-events: none; /* Impede que a imagem invisível interaja com o mouse */
   transform: rotateY(-360deg); /* Começa girada para a "entrada" */
-  /* Removemos o filtro padrão aqui, pois as cores de fundo foram ajustadas */
 }
 
 /* Camada de fundo que se move (o efeito de "subir") */
@@ -74,22 +70,22 @@
 
 /* Cores de fundo específicas para cada tecnologia (para o ::before) */
 /* As cores são as "oficiais" ou que combinam com a marca da tecnologia */
-.tech-html::before { background-color: #8f402b; } /* HTML (laranja) */
-.tech-css::before { background-color: #1572B6; } /* CSS (azul) */
+.tech-html::before { background-color: #8f402b; } 
+.tech-css::before { background-color: #1572B6; } 
 
 /* CORES AJUSTADAS PARA MELHOR CONTRASTE */
-.tech-js::before { background-color: #323330; } /* JavaScript: Fundo quase preto (do logo JS) */
-.tech-jquery::before { background-color: #1C3355; } /* jQuery: Um azul muito escuro */
-.tech-cypress::before { background-color: #17202C; } /* Cypress: Um cinza bem escuro, quase preto */
-.tech-python::before { background-color: #306998; } /* Python: Um azul mais escuro */
+.tech-js::before { background-color: #323330; } 
+.tech-jquery::before { background-color: #1C3355; } 
+.tech-cypress::before { background-color: #17202C; }
+.tech-python::before { background-color: #306998; } 
 
 
-.tech-react::before { background-color: #61DAFB; } /* React (azul claro) */
-.tech-ts::before { background-color: #3178C6; } /* TypeScript (azul) */
-.tech-tailwind::before { background-color: #076b7c; } /* Tailwind (azul ciano) */
-.tech-mysql::before { background-color: #4479A1; } /* MySQL (azul escuro) */
-.tech-node::before { background-color: #316b31; } /* Node.js (verde) */
-.tech-jest::before { background-color: #C21325; } /* Jest (vermelho) */
-.tech-figma::before { background-color: #792b13; } /* Figma (laranja avermelhado) */
-.tech-jira::before { background-color: #0052CC; } /* Jira (azul) */
-.tech-trello::before { background-color: #0079BF; } /* Trello (azul) */
+.tech-react::before { background-color: #61DAFB; } 
+.tech-ts::before { background-color: #3178C6; } 
+.tech-tailwind::before { background-color: #076b7c; } 
+.tech-mysql::before { background-color: #4479A1; } 
+.tech-node::before { background-color: #316b31; } 
+.tech-jest::before { background-color: #C21325; } 
+.tech-figma::before { background-color: #792b13; }
+.tech-jira::before { background-color: #0052CC; } 
+.tech-trello::before { background-color: #0079BF; } 
