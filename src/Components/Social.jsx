@@ -3,7 +3,7 @@ import './SocialIcons.css';
 function Social() {
     return (
         <>
-            <section id='social'   className='flex flex-col items-center gap-8 md:gap-16 mt-14 md:mt-24' >
+            <section id='social'   className='flex flex-col items-center gap-8 md:gap-16 mt-14 md:mt-72' >
                 <h2  className=" text-white text-2xl font-bold font-['Space_Grotesk'] md:text-[2.5rem] mt-10">Conecte-se Comigo!</h2>
                 
                 

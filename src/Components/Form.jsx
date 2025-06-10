@@ -86,11 +86,11 @@ function Form () {
               />
             </div>
              
-            <button disabled={state.submitting} className='cursor-pointer md:w-[38rem] md:h-[6rem] flex items-center justify-center w-[14.75rem] h-[2.938rem] rounded-2xl bg-[#B2BAE5]' type="submit">
-              <div className='flex gap-2'>
+            <button disabled={state.submitting} className='button-send hover:bg-[#121217] hover:text-white cursor-pointer md:w-[38rem] md:h-[6rem] flex items-center justify-center w-[14.75rem] h-[2.938rem] rounded-2xl bg-[#B2BAE5]' type="submit">
+              <div className='flex gap-2 '>
                 <span className='md:text-4xl font-bold font-["Space_Grotesk"] text-[1rem]'>Envie sua mensagem</span>
-                <img src={Seta} className='md:hidden' alt="Seta para enviar"/>
-                <img src={SetaDesktop} className='hidden md:block' alt="Seta para enviar"/>
+                <img src={Seta} className='button-arrow-icon md:hidden' alt="Seta para enviar"/>
+                <img src={SetaDesktop} className='button-arrow-icon hidden md:block' alt="Seta para enviar"/>
               </div>
             </button>
           </form>

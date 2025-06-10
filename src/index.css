@@ -10,3 +10,8 @@
 section[id]{
     scroll-margin-top: 5rem;
 }
+
+.button-send:hover .button-arrow-icon{
+     filter: invert(1);
+     transition: filter 0.3s ease;
+}
