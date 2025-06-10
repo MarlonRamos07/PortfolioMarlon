@@ -11,6 +11,7 @@
     "postinstall": "flowbite-react patch"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "@tailwindcss/postcss": "^4.1.8",
     "@tailwindcss/vite": "^4.1.8",
     "flowbite-react": "^0.11.7",
@@ -19,6 +20,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-intersection-observer": "^9.16.0",
+    "sweetalert2": "^11.22.0",
     "tailwindcss": "^4.1.8",
     "tailwindcss-no-scrollbar": "^1.0.1"
   },

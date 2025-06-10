@@ -6,7 +6,8 @@ import Projects from "./Components/Projects"
 import Testimonials from './Components/Testimonials'
 import { AnimatePresence } from 'framer-motion'
 import Social from './Components/Social'
-
+import Form from './Components/Form'
+import Whats from './Components/WhatsCall'
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
       <Projects/>
       <Testimonials/>
       <Social/>
+      <Form/>
+      <Whats/>
       </AnimatePresence>
     </>
   )
