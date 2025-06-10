@@ -8,6 +8,7 @@ import { AnimatePresence } from 'framer-motion'
 import Social from './Components/Social'
 import Form from './Components/Form'
 import Whats from './Components/WhatsCall'
+import ScrollToTopButton from './Components/ScrollToTopButton'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
       <Form/>
       <Whats/>
       </AnimatePresence>
+      <ScrollToTopButton/>
     </>
   )
 }

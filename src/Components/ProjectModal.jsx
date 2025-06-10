@@ -36,7 +36,6 @@ export function ProjectModal({ project, openModal, onClose }) {
               </a>
             </p>
           )}
-          {/* Você pode adicionar mais detalhes aqui, como a imagem do projeto, etc. */}
         </div>
       </ModalBody>
       <ModalFooter className="bg-[#A3A6B2]">

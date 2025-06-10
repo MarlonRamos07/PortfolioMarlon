@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from 'flowbite-react'; // Importar Modal components para o ProjectModal, se você não os usa diretamente aqui
+import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from 'flowbite-react'; 
 import { motion, AnimatePresence } from 'framer-motion';
 import MyDropdown from './MyDropdown'; 
 import { ProjectModal } from './ProjectModal';
