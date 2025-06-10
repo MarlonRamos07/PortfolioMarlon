@@ -114,6 +114,7 @@ function Projects() {
             whileTap={{ cursor: canDrag ? 'grabbing' : 'grab' }}
           >
             <motion.div
+              id='projects'
               className='inner flex flex-nowrap gap-6 md:gap-8 mt-8'
               drag={canDrag ? 'x' : false}
               dragConstraints={{ right: 0, left: -constraintsWidth }}
@@ -159,7 +160,7 @@ function Projects() {
 
   return (
     <>
-      <section className='flex flex-col items-center justify-center gap-16 mt-16 md:mt-36 md:gap-12 mb-20'>
+      <section className='flex flex-col items-center justify-center gap-16 mt-16 md:mt-36 md:gap-12 mb-20' id="projects">
         <h2 className="text-white text-2xl font-bold font-['Space_Grotesk'] md:text-[2.5rem] mt-10">Meus projetos</h2>
         <h3 className='text-white md:text-2xl text-center'>Por favor, escolha uma categoria abaixo <br/>(arraste para ver) </h3>
         

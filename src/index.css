@@ -7,3 +7,6 @@
     font-family: 'Space Grotesk', 'Sans-Serif';
 }
 
+section[id]{
+    scroll-margin-top: 5rem;
+}

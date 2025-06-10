@@ -7,6 +7,7 @@ function Sobre() {
   })
 
   return (
+    <section id="sobre">
     <motion.div
       ref={ref}
       initial={{ opacity: 0 }}
@@ -19,6 +20,7 @@ function Sobre() {
         Desenvolvedor Fullstack com foco em <b>performance,</b> acessibilidade e <b>experiência do usuário.</b> Trabalho com <b>React, TypeScript, TailwindCSS, Jest e SQL,</b> unindo frontend moderno a testes robustos e integração com o back-end. Também atuo com <b>Figma,</b> garantindo <b>consistência</b> entre design e desenvolvimento. Busco sempre evoluir tecnicamente e entregar <b>soluções eficientes e escaláveis.</b>
       </p>
     </motion.div>
+    </section>
   )
 }
 

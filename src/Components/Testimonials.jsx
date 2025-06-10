@@ -5,7 +5,7 @@ import Milene from "../assets/Milene1.jpg";
 function Testimonials() {
   return (
 
-    <section className="flex flex-col items-center gap-8">
+    <section className="flex flex-col items-center gap-8" id="depoimentos">
     <h2 className="text-white text-2xl font-bold font-['Space_Grotesk'] md:text-[2.5rem]">Depoimentos</h2>
     <div className="flex flex-col items-center gap-8 md:flex-row md:mt-6">
 

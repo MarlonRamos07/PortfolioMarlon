@@ -29,7 +29,7 @@ function Form () {
 
   return (
     <>
-      <section className="flex flex-col items-center mt-28 gap-16 md:mt-72">
+      <section className="flex flex-col items-center mt-28 gap-16 md:mt-72" id='contato'>
         <h2 className="text-white text-2xl font-bold font-['Space_Grotesk'] md:text-[2.5rem]">Em que posso lhe ajudar?</h2>
         
         <div className="bg-[#2B2E36] w-[18.75rem] h-[29.688rem] rounded-3xl flex flex-col p-10 md:w-[50.813rem] md:h-[57.625rem] md:p-28">
