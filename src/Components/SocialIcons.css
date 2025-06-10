@@ -1,0 +1,67 @@
+.social-icon-btn {
+  width: 6.25rem; 
+  height: 6.25rem;
+  background-color: #2B2E36; 
+  text-align: center;
+  line-height: 6.25rem; 
+  font-size: 2.188rem;
+  display: block;
+  border-radius: 624.938rem; 
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo do ícone dentro do botão */
+.social-icon-btn .icon {
+  position: relative;
+  color: #fff; 
+  transition: .5s;
+  z-index: 3;
+}
+
+/* Animação do ícone ao passar o mouse */
+.social-icon-btn:hover .icon {
+  color: #fff; 
+  transform: rotateY(360deg);
+}
+
+/* Camada de fundo que se move */
+.social-icon-btn::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00; 
+  transition: .5s;
+  z-index: 2;
+}
+
+/* Animação da camada de fundo ao passar o mouse */
+.social-icon-btn:hover::before {
+  top: 0;
+}
+
+/* Cores específicas para cada ícone (Instagram, GitHub, LinkedIn) */
+.social-icon-instagram::before {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social-icon-github::before {
+  background: #333; /* Cor do GitHub */
+}
+
+.social-icon-linkedin::before {
+  background: #0077B5; /* Cor do LinkedIn */
+}
+
+/* Garante que o ul não sobreponha outros elementos se estiver absolute */
+ul {
+  position: relative; /* Ajusta para relative para não sair do fluxo do documento */
+}

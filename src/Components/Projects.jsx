@@ -1,25 +1,20 @@
-// src/Components/Projects.jsx
-
-import React, { useState, useEffect, useRef } from 'react'
-import { Button } from 'flowbite-react' // <<<< REMOVIDO 'Modal' DA IMPORTAÇÃO
+import { useState, useEffect, useRef } from 'react'
+import { Button } from 'flowbite-react' 
 import { motion, AnimatePresence } from 'framer-motion'
 import MyDropdown from './MyDropdown'
 
-// --- Importações de Imagens dos Projetos ---
-// Garanta que TODOS os nomes de arquivo na pasta 'src/assets' NÃO tenham espaços
-// e que as importações correspondam EXATAMENTE aos nomes dos arquivos (incluindo extensão).
 import HongLanding from '../assets/HongLanding.png'
 import DNCLanding from '../assets/DNCLanding.png'
 import FitQuestLanding from '../assets/FitQuest.png'
 import Portfolio from '../assets/Portfolio.png'
 import DigitalAgency from '../assets/DigitalAgency.png'
-import DoctorCare from '../assets/DoctorCare .png' // Confirme que o arquivo é DoctorCare.png (sem espaço)
+import DoctorCare from '../assets/DoctorCare .png' 
 import Arquitetura from '../assets/Arquitetura.png'
 import DncWeather from '../assets/DncWeather.png'
 import ToDo from '../assets/ToDoList.png'
 
 
-// --- Dados Hardcoded dos Projetos ---
+
 const projects = [
   { id: 'lp1', type: 'Landing-Page', image: HongLanding, title: 'Hong Long', synopsis: 'Uma landing sobre delivery de comida chinesa', description: 'Uma landing page que nasceu da Disciplina de Engenharia de Software, sobre um aplicativo fictício de Delivery de comida Chinesa Tradicional, o projeto passo por todos os processos de Desenvolvimento de um Software, desde levantamento de requisitos, casos de uso, até, de fato, o desenvolvimento, uma landing para o app que será desenvolvido.', stack: ['React', 'TailwindCSS', 'Flowbite React'], projectLink: 'https://hong-long.vercel.app', githubLink: 'https://github.com/MarlonRamos07/Hong-Long-Landing' },
   { id: 'lp2', type: 'Landing-Page', image: DNCLanding, title: 'DNC School', synopsis: 'Landing Page de uma Escola de Desenvolvimento', description: 'Uma landing page desenvolvida no ciclo base do curso de formação de Desenvolvedor FullStack da Escola DNC', stack: ['HTML', 'CSS', 'Javascript'], projectLink: 'https://lp-teste-dnc.netlify.app', githubLink: 'https://github.com/MarlonRamos07/projeto-landing-page' },
@@ -35,9 +30,7 @@ const projects = [
 
 function Projects() {
   const [activeCategory, setActiveCategory] = useState(null)
-  // REMOVIDOS: Estados do modal
-  // const [openModal, setOpenModal] = useState(false)
-  // const [selectedProject, setSelectedProject] = useState(null)
+
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
 
   const handleResize = () => {
@@ -49,15 +42,7 @@ function Projects() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  // REMOVIDAS: Funções do modal
-  // const handleOpenModal = (project) => {
-  //   setSelectedProject(project)
-  //   setOpenModal(true)
-  // }
-  // const handleCloseModal = () => {
-  //   setOpenModal(false)
-  //   setSelectedProject(null)
-  // }
+
 
   const handleSelectCategory = (categoryType) => {
     setActiveCategory(categoryType)
@@ -136,7 +121,7 @@ function Projects() {
                       <p className='text-white md:text-xl font-["Space_Grotesk"]'>
                         {project.synopsis}
                       </p>
-                      {/* Botão Detalhes: SEM LÓGICA DE MODAL AQUI */}
+                      
                       <Button className='mt-auto w-full !bg-[#B2BAE5] !text-black font-["Space_Grotesk"] focus:!outline-none focus:!ring-0 focus:!shadow-none'>
                         <span>Detalhes</span>
                       </Button>
@@ -157,8 +142,8 @@ function Projects() {
   return (
     <>
       <section className='flex flex-col items-center justify-center gap-16 mt-16 md:mt-36 md:gap-12 mb-20'>
-        <h2 className="text-white text-2xl font-bold font-['Space_Grotesk'] md:text-[2.5rem]">Meus projetos</h2>
-        <h3 className='text-white md:text-2xl'>Por favor, escolha uma categoria abaixo: </h3>
+        <h2 className="text-white text-2xl font-bold font-['Space_Grotesk'] md:text-[2.5rem] mt-10">Meus projetos</h2>
+        <h3 className='text-white md:text-2xl text-center'>Por favor, escolha uma categoria abaixo <br/>(arraste para ver) </h3>
         
         <MyDropdown onSelectSection={handleSelectCategory}/>
         
@@ -196,9 +181,6 @@ function Projects() {
         </AnimatePresence>
 
       </section>
-
-      {/* --- O MODAL FOI REMOVIDO DAQUI --- */}
-      {/* Todo o bloco de renderização do Modal e a lógica de selectedProject/openModal não estão mais aqui. */}
     </>
   )
 }

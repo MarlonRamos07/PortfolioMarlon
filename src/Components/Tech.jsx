@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
 
+// Suas importações de SVG permanecem as mesmas
 import HTML from '../assets/html.svg'
 import HTMLDesktop from '../assets/htmldesktop.svg'
 import CSS from '../assets/css.svg'
@@ -18,23 +19,27 @@ import JIRA from '../assets/jira.svg'
 import TRELLO from '../assets/trello.svg'
 import Cypress from '../assets/cypress.svg'
 
+// Importe o CSS personalizado para os efeitos de hover (já feito)
+import './TechsHoverEffect.css';
+
 const techs = [
-  { src: HTML, alt: "HTML" },
-  { src: CSS, alt: "CSS" },
-  { src: JS, alt: "JavaScript" },
-  { src: REACT, alt: "React" },
-  { src: TS, alt: "TypeScript" },
-  { src: TW, alt: "Tailwind" },
-  { src: SQL, alt: "MySQL" },
-  { src: NODE, alt: "Node.js" },
-  { src: JEST, alt: "Jest" },
-  { src: FIGMA, alt: "Figma" },
-  { src: PYTHON, alt: "Python" },
-  { src: JQUERY, alt: "jQuery" },
-  { src: JIRA, alt: "Jira" },
-  { src: TRELLO, alt: "Trello" },
-  { src: Cypress, alt: "Cypress", hiddenOnMobile: true },
-]
+  // Mantenha as classes que mapeiam para as cores no CSS
+  { src: HTML, alt: "HTML", className: "tech-html" }, 
+  { src: CSS, alt: "CSS", className: "tech-css" },
+  { src: JS, alt: "JavaScript", className: "tech-js" },
+  { src: REACT, alt: "React", className: "tech-react" },
+  { src: TS, alt: "TypeScript", className: "tech-ts" },
+  { src: TW, alt: "Tailwind", className: "tech-tailwind" },
+  { src: SQL, alt: "MySQL", className: "tech-mysql" },
+  { src: NODE, alt: "Node.js", className: "tech-node" },
+  { src: JEST, alt: "Jest", className: "tech-jest" },
+  { src: FIGMA, alt: "Figma", className: "tech-figma" },
+  { src: PYTHON, alt: "Python", className: "tech-python" },
+  { src: JQUERY, alt: "jQuery", className: "tech-jquery" },
+  { src: JIRA, alt: "Jira", className: "tech-jira" },
+  { src: TRELLO, alt: "Trello", className: "tech-trello" },
+  { src: Cypress, alt: "Cypress", hiddenOnMobile: true, className: "tech-cypress" },
+];
 
 function Techs() {
   return (
@@ -54,8 +59,12 @@ function Techs() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: false, amount: 0.7 }}
-              className={`w-[7.5rem] h-[7.5rem] md:w-[11rem] md:h-[11rem] rounded-4xl bg-[#2B2E36] flex items-center justify-center p-2 
-                ${tech.hiddenOnMobile ? 'hidden md:flex' : ''}`}
+              className={`
+                w-[7.5rem] h-[7.5rem] md:w-[11rem] md:h-[11rem] 
+                rounded-4xl bg-[#2B2E36] flex items-center justify-center p-2 
+                ${tech.hiddenOnMobile ? 'hidden md:flex' : ''}
+                tech-item-container ${tech.className}
+              `}
             >
               {tech.alt === "HTML" ? (
                 <>
@@ -82,7 +91,7 @@ function Techs() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Techs
+export default Techs;
