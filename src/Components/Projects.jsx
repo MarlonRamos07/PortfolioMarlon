@@ -1,18 +1,19 @@
-import { useState, useEffect, useRef } from 'react'
-import { Button } from 'flowbite-react' 
-import { motion, AnimatePresence } from 'framer-motion'
-import MyDropdown from './MyDropdown'
+import { useState, useEffect, useRef } from 'react';
+import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from 'flowbite-react'; // Importar Modal components para o ProjectModal, se você não os usa diretamente aqui
+import { motion, AnimatePresence } from 'framer-motion';
+import MyDropdown from './MyDropdown'; 
+import { ProjectModal } from './ProjectModal';
 
-import HongLanding from '../assets/HongLanding.png'
-import DNCLanding from '../assets/DNCLanding.png'
-import FitQuestLanding from '../assets/FitQuest.png'
-import Portfolio from '../assets/Portfolio.png'
-import DigitalAgency from '../assets/DigitalAgency.png'
-import DoctorCare from '../assets/DoctorCare .png' 
-import Arquitetura from '../assets/Arquitetura.png'
-import DncWeather from '../assets/DncWeather.png'
-import ToDo from '../assets/ToDoList.png'
 
+import HongLanding from '../assets/HongLanding.png';
+import DNCLanding from '../assets/DNCLanding.png';
+import FitQuestLanding from '../assets/FitQuest.png';
+import Portfolio from '../assets/Portfolio.png';
+import DigitalAgency from '../assets/DigitalAgency.png';
+import DoctorCare from '../assets/DoctorCare .png';
+import Arquitetura from '../assets/Arquitetura.png';
+import DncWeather from '../assets/DncWeather.png';
+import ToDo from '../assets/ToDoList.png';
 
 
 const projects = [
@@ -30,8 +31,11 @@ const projects = [
 
 function Projects() {
   const [activeCategory, setActiveCategory] = useState(null)
-
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
+
+  // Estados para o Modal
+  const [openModal, setOpenModal] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768)
@@ -42,11 +46,22 @@ function Projects() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-
-
   const handleSelectCategory = (categoryType) => {
     setActiveCategory(categoryType)
   }
+
+  // Função para abrir o modal com o projeto correto
+  const handleOpenModal = (project) => {
+    setSelectedProject(project);
+    setOpenModal(true);
+  };
+
+  // Função para fechar o modal
+  const handleCloseModal = () => {
+    setOpenModal(false);
+    setSelectedProject(null); // Limpa o projeto selecionado ao fechar
+  };
+
 
   const landingPagesProjects = projects.filter(p => p.type === 'Landing-Page')
   const websitesProjects = projects.filter(p => p.type === 'Website')
@@ -122,7 +137,10 @@ function Projects() {
                         {project.synopsis}
                       </p>
                       
-                      <Button className='mt-auto w-full !bg-[#B2BAE5] !text-black font-["Space_Grotesk"] focus:!outline-none focus:!ring-0 focus:!shadow-none'>
+                      <Button 
+                        onClick={() => handleOpenModal(project)} // Chama a função para abrir o modal com o projeto atual
+                        className='cursor-pointer mt-auto w-full !bg-[#B2BAE5] !text-black font-["Space_Grotesk"] focus:!outline-none focus:!ring-0 focus:!shadow-none'
+                      >
                         <span>Detalhes</span>
                       </Button>
                     </div>
@@ -179,8 +197,15 @@ function Projects() {
                 </motion.div>
             )}
         </AnimatePresence>
-
       </section>
+
+      {/* Renderiza o Modal FORA do carrossel, mas no mesmo componente pai */}
+      {/* O modal só é visível se openModal for true e selectedProject não for null */}
+      <ProjectModal 
+        project={selectedProject} 
+        openModal={openModal} 
+        onClose={handleCloseModal} 
+      />
     </>
   )
 }

@@ -16,10 +16,10 @@ function myNavBar() {
         <NavbarLink className="md:text-white text-[0.875rem] md:hover:text-[#B2BAE5]" href="#sobre">
           Sobre Mim 
         </NavbarLink>
-        <NavbarLink className="md:text-white text-[0.875rem] md:hover:text-[#B2BAE5] " href="#tech">Tecnologias</NavbarLink>
-        <NavbarLink className="md:text-white text-[0.875rem] md:hover:text-[#B2BAE5] " href="#projetos">Projetos</NavbarLink>
-        <NavbarLink className="md:text-white text-[0.875rem] md:hover:text-[#B2BAE5] " href="#depoimentos">Depoimentos</NavbarLink>
-        <NavbarLink className="md:text-white text-[0.875rem] md:hover:text-[#B2BAE5] " href="#social">Redes Sociais</NavbarLink>
+        <NavbarLink className="md:text-black text-[0.875rem] md:hover:text-black " href="#tech">Tecnologias</NavbarLink>
+        <NavbarLink className="md:text-black text-[0.875rem] md:hover:text-black " href="#projetos">Projetos</NavbarLink>
+        <NavbarLink className="md:text-black text-[0.875rem] md:hover:text-black " href="#depoimentos">Depoimentos</NavbarLink>
+        <NavbarLink className="md:text-black text-[0.875rem] md:hover:text-black " href="#social">Redes Sociais</NavbarLink>
       </NavbarCollapse>
     </Navbar>
   );

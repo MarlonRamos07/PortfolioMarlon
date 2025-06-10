@@ -16,7 +16,6 @@ function Hero() {
       initial={{ opacity: 0 }}
       animate={{ opacity: inView ? 1 : 0 }}
       transition={{ duration: 0.5 }}
-      // REMOVIDO: onAnimationComplete={handleHeroAnimationsComplete}
       className='flex flex-col md:flex-row-reverse items-center md:justify-center
                  md:mt-24 md:items-center text-center pt-10 gap-8
 '
