@@ -13,13 +13,13 @@ function myNavBar() {
         <NavbarToggle className="ml-3.5 hover:bg-[#B2BAE5] text-black"/>
       </div>
       <NavbarCollapse className="font-['Space_Grotesk'] text-center bg-[#B2BAE5]  md:bg-transparent font-bold mt-4">
-        <NavbarLink className="md:text-white !text-black text-[0.875rem] md:hover:text-[#B2BAE5]" href="#sobre">
+        <NavbarLink className="md:!text-white !text-black text-[0.875rem] md:hover:!text-[#B2BAE5]" href="#sobre">
           Sobre Mim 
         </NavbarLink>
-        <NavbarLink className="md:text-black text-[0.875rem] md:hover:text-[#B2BAE5] !text-black " href="#tech">Tecnologias</NavbarLink>
-        <NavbarLink className="md:text-black text-[0.875rem] md:hover:text-[#B2BAE5] !text-black" href="#projects">Projetos</NavbarLink>
-        <NavbarLink className="md:text-black text-[0.875rem] mmd:hover:text-[#B2BAE5] !text-black" href="#depoimentos">Depoimentos</NavbarLink>
-        <NavbarLink className="md:text-black text-[0.875rem] md:hover:text-[#B2BAE5] !text-black" href="#social">Redes Sociais</NavbarLink>
+        <NavbarLink className="md:!text-white text-[0.875rem] md:hover:!text-[#B2BAE5] !text-black " href="#tech">Tecnologias</NavbarLink>
+        <NavbarLink className="md:!text-white text-[0.875rem] md:hover:!text-[#B2BAE5] !text-black" href="#projects">Projetos</NavbarLink>
+        <NavbarLink className="md:!text-white text-[0.875rem] md:hover:!text-[#B2BAE5] !text-black" href="#depoimentos">Depoimentos</NavbarLink>
+        <NavbarLink className="md:!text-white text-[0.875rem] md:hover:!text-[#B2BAE5] !text-black" href="#social">Redes Sociais</NavbarLink>
       </NavbarCollapse>
     </Navbar>
   );

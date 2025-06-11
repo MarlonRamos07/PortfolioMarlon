@@ -140,9 +140,9 @@ function Projects() {
                       
                       <Button 
                         onClick={() => handleOpenModal(project)} // Chama a função para abrir o modal com o projeto atual
-                        className='cursor-pointer mt-auto w-full !bg-[#B2BAE5] !text-black font-["Space_Grotesk"] focus:!outline-none focus:!ring-0 focus:!shadow-none'
+                        className='cursor-pointer mt-auto w-full !bg-[#B2BAE5] !text-black font-["Space_Grotesk"] md:hover:!bg-[#A3A6B2] md:hover:!text-white focus:!outline-none focus:!ring-0 focus:!shadow-none'
                       >
-                        <span>Detalhes</span>
+                        <span className='bold '>Detalhes</span>
                       </Button>
                     </div>
                   </div>
