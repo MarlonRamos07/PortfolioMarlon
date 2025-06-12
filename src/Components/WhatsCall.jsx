@@ -4,7 +4,7 @@ import WhatsDesktop from '../assets/whatsDesktop.svg'
 function Whats(){
     return(
         
-        <section className="flex flex-col items-center mt-12 gap-6 pb-8 md:mt-36 md:pb-16 md:gap-16">
+        <section className="flex flex-col items-center mt-12 gap-6 pb-24 md:mt-36 md:pb-32 md:gap-16">
             <h2 className="text-white text-2xl font-bold font-['Space_Grotesk'] md:text-[2.5rem]">Ou se preferir...</h2>
 
             <button type='submit' className='hover:bg-[#2B2E36] hover:text-white cursor-pointer md:w-[40.875rem] md:h-[8rem] w-[18rem] h-[3.375rem] rounded-4xl bg-[#B2BAE5] flex items-center justify-center'>
