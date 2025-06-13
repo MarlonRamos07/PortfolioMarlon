@@ -12,8 +12,6 @@ O portfólio foi desenvolvido como uma SPA (Single Page Application) com React, 
   
 - Tailwind CSS
   
-- TypeScript
-  
 - Framer Motion
   
 - Vite
