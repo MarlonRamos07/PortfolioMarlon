@@ -56,7 +56,7 @@ function Hero() {
           className='flex flex-col md:flex-row gap-4 mt-10'
         >
           <button className='hover:border-solid-[#B2BAE5] hover:bg-[#2B2E36] hover:text-white w-[18.813rem] h-[3.688rem] rounded-[1.25rem] bg-[#B2BAE5]'>
-            <a className='font-bold text-[1.25rem]' href="">Conheça o meu trabalho</a>
+            <a className='font-bold text-[1.25rem]' href="#projects">Conheça o meu trabalho</a>
           </button>
 
           <a
