@@ -9,7 +9,7 @@ export function ProjectModal({ project, openModal, onClose }) {
   return (
     <Modal dismissible show={openModal} onClose={onClose}>
       <ModalHeader className="bg-[#A3A6B2]">
-        {project.title} {/* Título do projeto */}
+        {project.title} 
       </ModalHeader>
       <ModalBody className="bg-[#A3A6B2]" >
         <div className="space-y-6">

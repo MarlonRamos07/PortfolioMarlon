@@ -3,7 +3,7 @@ import Download from '../assets/download.svg'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
 import { useInView } from 'react-intersection-observer'
-import TypingEffect from './TypingEffect' // Não precisa mais de useState aqui
+import TypingEffect from './TypingEffect' 
 
 function Hero() {
   const [ref, inView] = useInView({
@@ -36,7 +36,6 @@ function Hero() {
         viewport={{ once: false, amount: 0.7 }}
         className='flex flex-col gap-6 items-center md:items-start md:gap-10'
       >
-        {/* REMOVIDO: startTyping={heroAnimationsComplete} */}
         <TypingEffect />
 
         <motion.p
@@ -61,7 +60,7 @@ function Hero() {
           </button>
 
           <a
-            href="/curriculo.pdf"
+            href="/MarlonRamos.pdf"
             download
             target="_blank"
             rel="noopener noreferrer"
