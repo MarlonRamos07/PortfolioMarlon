@@ -4,7 +4,7 @@ const TypingEffect = () => {
   const basePhrase = "Olá, eu sou Marlon, "
 
   const variablePhrases = useMemo(() => [
-    "Desenvolvedor FrontEnd",
+    "Desenvolvedor Front-End",
     "Quality Assurance",
     "Estudante de ADS UniSenac",
     "Bem-vindo ao meu Portfólio!",

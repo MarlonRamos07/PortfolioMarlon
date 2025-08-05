@@ -17,7 +17,7 @@ function Sobre() {
     >
       <h3 className="text-white text-2xl/normal font-bold md:text-[2.5rem]">Sobre Mim</h3>
       <p className="text-white text-center text-[0.938rem] w-[19.375rem] md:text-2xl/relaxed md:w-[54rem] md:h-[15rem] md:text-start">
-        Desenvolvedor Fullstack com foco em <b>performance,</b> acessibilidade e <b>experiência do usuário.</b> Trabalho com <b>React, TypeScript, TailwindCSS, Jest e SQL,</b> unindo frontend moderno a testes robustos e integração com o back-end. Também atuo com <b>Figma,</b> garantindo <b>consistência</b> entre design e desenvolvimento. Busco sempre evoluir tecnicamente e entregar <b>soluções eficientes e escaláveis.</b>
+        Desenvolvedor Front-End com foco em <b>performance,</b> acessibilidade e <b>experiência do usuário.</b> Trabalho com <b>React, TypeScript, TailwindCSS, Jest e SQL,</b> unindo frontend moderno a testes robustos e integração com o back-end. Também atuo com <b>Figma,</b> garantindo <b>consistência</b> entre design e desenvolvimento. Busco sempre evoluir tecnicamente e entregar <b>soluções eficientes e escaláveis.</b>
       </p>
     </motion.div>
     </section>
