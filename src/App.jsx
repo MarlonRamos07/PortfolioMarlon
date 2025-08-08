@@ -15,7 +15,6 @@ function App() {
 
   return (
     <>
-    
       <MyNavBar/>
       <AnimatePresence mode ="wait">
       <Hero/>
