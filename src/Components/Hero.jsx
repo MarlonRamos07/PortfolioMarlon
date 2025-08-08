@@ -60,7 +60,7 @@ function Hero() {
           </button>
 
           <a
-            href="/MarlonRamos.pdf"
+            href="/Marlon_Ramos_Costa.pdf"
             download
             target="_blank"
             rel="noopener noreferrer"
