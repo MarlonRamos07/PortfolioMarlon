@@ -72,7 +72,7 @@ function Testimonials() {
                     src={testimonial.image} 
                     className="w-[7rem] h-[7rem] rounded-full object-cover" 
                   />
-                  <h5 className="mb-1 text-2xl font-medium text-gray-900 dark:text-white">{testimonial.name}</h5>
+                  <h5 className="mb-1 text-2xl font-medium text-white dark:text-white">{testimonial.name}</h5>
                   <span className="font-bold text-white text-xl">{testimonial.role}</span>
                   <p className="text-sm text-white dark:text-gray-400 px-4 md:px-0 flex-grow"> 
                     <i>"{testimonial.quote}"</i>

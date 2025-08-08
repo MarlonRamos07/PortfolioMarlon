@@ -40,7 +40,7 @@ function Form () {
             <div className='flex flex-col gap-2 md:gap-6'>
               <label htmlFor='name' className='md:text-4xl font-bold text-white font-["Space_Grotesk"] text-[1rem]'>Seu nome</label>
               <input
-                className='md:text-2xl font-bold text-[#2B2E36] text-[0.6rem] md:w-[28.75rem] md:h-[4.25rem] p-2 w-[12.813rem] h-[1.875rem] bg-[#B2BAE5] rounded-2xl focus:outline-none focus:ring-0' // Adicionado focus:outline-none
+                className='md:text-2xl font-bold text-[#2B2E36] text-[0.6rem] md:w-[35.75rem] md:h-[4.25rem] p-2 w-[12.813rem] h-[1.875rem] bg-[#B2BAE5] rounded-2xl focus:outline-none focus:ring-0' // Adicionado focus:outline-none
                 type="text"
                 placeholder="Digite seu nome"
                 name="name" 
@@ -56,7 +56,7 @@ function Form () {
             <div className='flex flex-col gap-2 md:gap-6' >
               <label htmlFor='email' className='md:text-4xl font-bold text-white font-["Space_Grotesk"] text-[1rem]' >Seu e-mail</label>
               <input
-                className='md:text-2xl font-bold text-[#2B2E36] text-[0.6rem] md:w-[28.75rem] md:h-[4.25rem] md:p-4 p-2 w-[14.813rem] h-[1.875rem] bg-[#B2BAE5] rounded-2xl focus:outline-none focus:ring-0' // Adicionado focus:outline-none
+                className='md:text-2xl font-bold text-[#2B2E36] text-[0.6rem] md:w-[35.75rem] md:h-[4.25rem] md:p-4 p-2 w-[14.813rem] h-[1.875rem] bg-[#B2BAE5] rounded-2xl focus:outline-none focus:ring-0' // Adicionado focus:outline-none
                 id="email"
                 type="email"
                 name="_replyto" 

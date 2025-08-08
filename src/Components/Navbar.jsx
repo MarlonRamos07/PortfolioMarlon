@@ -4,7 +4,7 @@ import '../index.css'
 function myNavBar() {
   return (
     <Navbar className="bg-[#121217] pt-7 sticky top-0 shadow p-4 z-50">
-      <h1 className="text-[1rem] text-white  h-[1.313rem] md:w-[13.313rem] md:text-[1.125rem] md:h-[1.438rem] font-['Space_Grotesk']  ">Desenvolvedor Front-End</h1>
+      <h1 className="text-[1rem] text-white  h-[1.313rem] md:w-[13.313rem] md:text-[1.125rem] md:h-[1.438rem] font-['Space_Grotesk']  ">Dev Front e QA </h1>
       <NavbarBrand href="https://flowbite-react.com">
       </NavbarBrand>
       <div className="flex md:order-2">
